@@ -3,7 +3,12 @@ import { motion } from 'motion/react';
 import { Send, Sparkles, Loader2 } from 'lucide-react';
 import { GoogleGenAI } from '@google/genai';
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+let ai: any = null;
+try {
+  ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || 'MISSING_KEY' });
+} catch (error) {
+  console.warn("Gemini API key is missing or invalid.");
+}
 
 export default function Contact() {
   const [message, setMessage] = useState('');
