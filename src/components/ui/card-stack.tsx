@@ -11,10 +11,7 @@ export type CardStackItem = {
   title: string;
   description?: string;
   imageSrc?: string;
-<<<<<<< HEAD
   videoSrc?: string;
-=======
->>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
   href?: string;
   ctaLabel?: string;
   tag?: string;
@@ -125,11 +122,8 @@ export function CardStack<T extends CardStackItem>({
     wrapIndex(initialIndex, len),
   );
   const [hovering, setHovering] = React.useState(false);
-<<<<<<< HEAD
   const [selectedItem, setSelectedItem] = React.useState<T | null>(null);
   const [canCloseOnMove, setCanCloseOnMove] = React.useState(false);
-=======
->>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
 
   // keep active in bounds if items change
   React.useEffect(() => {
@@ -137,7 +131,6 @@ export function CardStack<T extends CardStackItem>({
   }, [len]);
 
   React.useEffect(() => {
-<<<<<<< HEAD
     if (selectedItem) {
       const timer = setTimeout(() => setCanCloseOnMove(true), 500);
       return () => clearTimeout(timer);
@@ -147,8 +140,6 @@ export function CardStack<T extends CardStackItem>({
   }, [selectedItem]);
 
   React.useEffect(() => {
-=======
->>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
     if (!len) return;
     onChangeIndex?.(active, items[active]!);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -186,10 +177,7 @@ export function CardStack<T extends CardStackItem>({
     if (reduceMotion) return;
     if (!len) return;
     if (pauseOnHover && hovering) return;
-<<<<<<< HEAD
     if (selectedItem) return;
-=======
->>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
 
     const id = window.setInterval(
       () => {
@@ -335,7 +323,6 @@ export function CardStack<T extends CardStackItem>({
                   }}
                   // translateZ via style transform (kept stable w/ motion values above)
                   // We apply translateZ by using a CSS transform in a child wrapper.
-<<<<<<< HEAD
                   onClick={() => {
                     if (isActive) {
                       setSelectedItem(item);
@@ -343,9 +330,6 @@ export function CardStack<T extends CardStackItem>({
                       setActive(i);
                     }
                   }}
-=======
-                  onClick={() => setActive(i)}
->>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
                   {...dragProps}
                 >
                   <div
@@ -402,7 +386,6 @@ export function CardStack<T extends CardStackItem>({
           ) : null}
         </div>
       ) : null}
-<<<<<<< HEAD
 
       {/* Fullscreen Popup */}
       <AnimatePresence>
@@ -446,8 +429,6 @@ export function CardStack<T extends CardStackItem>({
           </motion.div>
         )}
       </AnimatePresence>
-=======
->>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
     </div>
   );
 }
@@ -455,7 +436,6 @@ export function CardStack<T extends CardStackItem>({
 function DefaultFanCard({ item }: { item: CardStackItem; active: boolean }) {
   return (
     <div className="relative h-full w-full">
-<<<<<<< HEAD
       {/* image/video */}
       <div className="absolute inset-0">
         {item.videoSrc ? (
@@ -490,21 +470,6 @@ function DefaultFanCard({ item }: { item: CardStackItem; active: boolean }) {
         ) : (
           <div className="flex h-full w-full items-center justify-center bg-gray-800 text-sm text-gray-400">
             No media
-=======
-      {/* image */}
-      <div className="absolute inset-0">
-        {item.imageSrc ? (
-          <img
-            src={item.imageSrc}
-            alt={item.title}
-            className="h-full w-full object-cover"
-            draggable={false}
-            loading="eager"
-          />
-        ) : (
-          <div className="flex h-full w-full items-center justify-center bg-gray-800 text-sm text-gray-400">
-            No image
->>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
           </div>
         )}
       </div>

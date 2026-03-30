@@ -71,11 +71,7 @@ export default function Certifications() {
   const [activeId, setActiveId] = useState(1);
 
   return (
-<<<<<<< HEAD
     <section id="certifications" className="py-24 relative bg-black border-t border-silver/10 min-h-screen flex flex-col items-center justify-center overflow-hidden">
-=======
-    <section id="certifications" className="py-24 relative bg-[#232223] border-t border-silver/10 min-h-screen flex flex-col items-center justify-center overflow-hidden">
->>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
       <style>{`
         .options-container {
           width: 100%;

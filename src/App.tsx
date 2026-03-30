@@ -3,7 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-<<<<<<< HEAD
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -30,44 +29,20 @@ function HomePage() {
     }
   }, [location]);
 
-=======
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Mission from './components/Mission';
-import Vault from './components/Vault';
-import SparklesSection from './components/SparklesSection';
-import { HeroSection } from './components/ui/hero-section-shadcnui';
-import Certifications from './components/Certifications';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import NexusAI from './components/NexusAI';
-
-export default function App() {
->>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
   return (
     <div className="min-h-screen bg-charcoal text-silver selection:bg-cyan/30 selection:text-white">
       <Navbar />
       <main>
         <Hero />
-<<<<<<< HEAD
         <Mission />
         <HeroSection />
         <VortexForm />
-=======
-        <SparklesSection />
-        <Mission />
-        <Vault />
-        <HeroSection />
-        <Certifications />
-        <Contact />
->>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
       </main>
       <Footer />
       <NexusAI />
     </div>
   );
 }
-<<<<<<< HEAD
 
 export default function App() {
   return (
@@ -80,5 +55,3 @@ export default function App() {
     </Router>
   );
 }
-=======
->>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e

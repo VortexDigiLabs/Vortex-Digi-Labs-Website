@@ -3,18 +3,8 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Terminal, X, Send, Cpu, Loader2 } from 'lucide-react';
 import { GoogleGenAI } from '@google/genai';
 
-<<<<<<< HEAD
 // Initialize Gemini
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
-=======
-// Initialize Gemini cautiously to prevent website crash if API key is missing
-let ai: any = null;
-try {
-  ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || 'MISSING_KEY' });
-} catch (error) {
-  console.warn("Gemini API key is missing or invalid.");
-}
->>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
 
 export default function NexusAI() {
   const [isOpen, setIsOpen] = useState(false);
