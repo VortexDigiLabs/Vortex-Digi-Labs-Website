@@ -2,6 +2,7 @@ import { CardStack, CardStackItem } from "./ui/card-stack";
 
 const items: CardStackItem[] = [
   {
+<<<<<<< HEAD
     id: 7,
     title: "Video Project 10",
     description: "Immersive video experience.",
@@ -9,6 +10,8 @@ const items: CardStackItem[] = [
     href: "#",
   },
   {
+=======
+>>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
     id: 1,
     title: "Background Paths",
     description: "Dynamic and engaging background path animations.",
@@ -50,6 +53,7 @@ const items: CardStackItem[] = [
     imageSrc: "https://huprbedahpwszatolkce.supabase.co/storage/v1/object/public/Vortex%20Digi%20Labs%20-%20Website/Shader%20Animation.webp",
     href: "#",
   },
+<<<<<<< HEAD
   {
     id: 8,
     title: "Video Project 11",
@@ -57,6 +61,8 @@ const items: CardStackItem[] = [
     videoSrc: "https://huprbedahpwszatolkce.supabase.co/storage/v1/object/public/Vortex%20Digi%20Labs%20-%20Website/Video%20Project%2011.mp4",
     href: "#",
   },
+=======
+>>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
 ];
 
 export default function Vault() {

@@ -1,6 +1,9 @@
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+=======
+>>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
 import TimeWarp from './TimeWarp';
 
 export default function Hero() {
@@ -81,12 +84,21 @@ export default function Hero() {
             </span>
           </a>
           
+<<<<<<< HEAD
           <Link
             to="/vault"
             className="inline-flex items-center justify-center px-8 py-4 font-mono font-bold text-silver border border-silver/20 hover:border-cyan hover:text-cyan transition-colors duration-300 w-full sm:w-auto"
           >
             ACCESS VAULT
           </Link>
+=======
+          <a
+            href="#vault"
+            className="inline-flex items-center justify-center px-8 py-4 font-mono font-bold text-silver border border-silver/20 hover:border-cyan hover:text-cyan transition-colors duration-300 w-full sm:w-auto"
+          >
+            ACCESS VAULT
+          </a>
+>>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
         </motion.div>
       </div>
     </section>

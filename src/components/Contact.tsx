@@ -3,7 +3,16 @@ import { motion } from 'motion/react';
 import { Send, Sparkles, Loader2 } from 'lucide-react';
 import { GoogleGenAI } from '@google/genai';
 
+<<<<<<< HEAD
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+=======
+let ai: any = null;
+try {
+  ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || 'MISSING_KEY' });
+} catch (error) {
+  console.warn("Gemini API key is missing or invalid.");
+}
+>>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
 
 export default function Contact() {
   const [message, setMessage] = useState('');
@@ -26,6 +35,7 @@ export default function Contact() {
   };
 
   return (
+<<<<<<< HEAD
     <section id="contact" className="py-24 relative bg-charcoal overflow-hidden">
       {/* Animated Background Image */}
       <motion.div
@@ -46,16 +56,30 @@ export default function Contact() {
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue/50 to-transparent z-10" />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+=======
+    <section id="contact" className="py-24 relative bg-charcoal">
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue/50 to-transparent" />
+      
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white"
           >
             INITIATE <span className="text-blue">COMMUNICATION</span>
           </motion.h2>
           <p className="text-silver/90 font-mono">Secure channel open for AI Consultation & FM Digital Optimization.</p>
+=======
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
+          >
+            INITIATE <span className="text-blue">COMMUNICATION</span>
+          </motion.h2>
+          <p className="text-silver/70 font-mono">Secure channel open for AI Consultation & FM Digital Optimization.</p>
+>>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
         </div>
 
         <motion.form 

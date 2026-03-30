@@ -116,7 +116,11 @@ export default function TimeWarp() {
         // Ease into the new opacity
         let desiredOpacity = 0.01;
         opacity += (desiredOpacity - opacity) * 0.03;
+<<<<<<< HEAD
         c.fillStyle = "rgba(0, 0, 0," + opacity + ")";
+=======
+        c.fillStyle = "rgba(18, 18, 18," + opacity + ")";
+>>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
 
         // Ease into the new speed
         let desiredSpeed = 0.012;
@@ -126,7 +130,11 @@ export default function TimeWarp() {
         // Ease back to the original opacity
         let originalOpacity = 1;
         opacity += (originalOpacity - opacity) * 0.01;
+<<<<<<< HEAD
         c.fillStyle = "rgba(0, 0, 0, " + opacity + ")";
+=======
+        c.fillStyle = "rgba(18, 18, 18, " + opacity + ")";
+>>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
 
         // Ease back to the original speed
         let originalSpeed = 0.001;
@@ -160,7 +168,11 @@ export default function TimeWarp() {
   }, []);
 
   return (
+<<<<<<< HEAD
     <div className="absolute inset-0 z-0 overflow-hidden bg-[#000000]">
+=======
+    <div className="absolute inset-0 z-0 overflow-hidden bg-[#121212]">
+>>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
       <canvas ref={canvasRef} className="block w-full h-full" />
       <p className="absolute top-24 left-4 sm:left-8 text-white/50 font-mono text-sm sm:text-base animate-pulse pointer-events-none z-10">
         Hold mouse down to enter time warp

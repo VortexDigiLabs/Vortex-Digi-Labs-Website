@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Menu, X } from 'lucide-react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+=======
+>>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,10 +19,17 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
+<<<<<<< HEAD
     { name: 'Mission', href: '/#mission' },
     { name: 'The Vault', href: '/vault' },
     { name: 'Certifications', href: '/certifications' },
     { name: 'Contact', href: '/#contact' },
+=======
+    { name: 'Mission', href: '#mission' },
+    { name: 'The Vault', href: '#vault' },
+    { name: 'Certifications', href: '#certifications' },
+    { name: 'Contact', href: '#contact' },
+>>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
   ];
 
   return (
@@ -32,7 +42,11 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
+<<<<<<< HEAD
           <Link to="/" className="flex items-center gap-2">
+=======
+          <div className="flex items-center gap-2">
+>>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
             <motion.svg
               viewBox="0 0 24 24"
               className="w-8 h-8 text-cyan"
@@ -51,11 +65,16 @@ export default function Navbar() {
             <span className="font-mono text-xl font-bold tracking-wider text-silver">
               VORTEX<span className="text-cyan">DIGI</span>LABS
             </span>
+<<<<<<< HEAD
           </Link>
+=======
+          </div>
+>>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
           
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navLinks.map((link) => (
+<<<<<<< HEAD
                 <Link
                   key={link.name}
                   to={link.href}
@@ -63,6 +82,15 @@ export default function Navbar() {
                 >
                   {link.name}
                 </Link>
+=======
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-silver hover:text-cyan transition-colors px-3 py-2 rounded-md font-mono text-sm uppercase tracking-widest"
+                >
+                  {link.name}
+                </a>
+>>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
               ))}
             </div>
           </div>
@@ -87,14 +115,24 @@ export default function Navbar() {
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
+<<<<<<< HEAD
               <Link
                 key={link.name}
                 to={link.href}
+=======
+              <a
+                key={link.name}
+                href={link.href}
+>>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="text-silver hover:text-cyan block px-3 py-2 rounded-md font-mono text-base uppercase tracking-widest"
               >
                 {link.name}
+<<<<<<< HEAD
               </Link>
+=======
+              </a>
+>>>>>>> 48e37882e183cb156941881e36fa7e050462ac0e
             ))}
           </div>
         </motion.div>
